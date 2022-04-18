@@ -34,7 +34,7 @@ export default {
   background: url("../assets/images/home/1_btn_bg.png");
   background-size: 100% 100%;
   cursor: pointer;
-  animation: fadebtn 1.2s linear alternate infinite;
+  animation: fadebtn 1s linear alternate infinite;
 }
 
 @keyframes fadebtn {

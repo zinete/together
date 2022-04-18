@@ -1,6 +1,6 @@
 <template>
-  <div class="home_bg">
-    <div class="home_bg_color">
+  <div class="home_bg_color">
+    <div class="home_bg">
       <div style="padding: 40px 0px 0px">
         <div
           v-for="(items, index) in $t('city')"
@@ -31,7 +31,6 @@
               </div>
               <el-collapse-transition>
                 <div class="text_box" v-show="items.checked">
-                  <!-- <img src="../assets/images/start/2_img1.png" alt="" /> -->
                   <div class="video_box">
                     <video-player
                       @play="onPlayerPlay($event, index)"
@@ -161,14 +160,14 @@ export default {
 .home_bg {
   width: 100%;
   height: 100% !important;
-  background: url("../assets/images/location/bg.png");
+  background: url("../assets/images/location/3_bg1.png");
   background-size: contain;
   position: relative;
 }
 .home_bg_color {
   width: 100%;
   height: 100%;
-  background: #0e2613c2;
+  background: #3a4934;
   padding-bottom: 100px;
 }
 
@@ -181,7 +180,7 @@ export default {
   left: 0px;
   right: 0px;
   width: 100%;
-
+  /* background-attachment: fixed !important; */
   padding-bottom: 80px;
   background-size: 92% 100% !important;
   background-repeat: no-repeat !important;
