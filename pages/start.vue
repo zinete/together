@@ -31,6 +31,9 @@
           <buttom @func="start" text="开启本次行程" class="btn_view" />
         </div>
       </div>
+
+      <img src="../assets/images/home/1_yun1.png" alt="" class="yun1" />
+      <img src="../assets/images/home/1_yun2.png" alt="" class="yun2" />
     </div>
   </div>
 </template>
@@ -60,7 +63,12 @@ export default {
   methods: {
     start() {
       //  跳转 location 页面
-      this.$router.push("/location");
+
+      this.$router.push(
+        this.localeLocation({
+          name: "location",
+        })
+      );
     },
     onPlayerPlay(player, index) {
       let that = this.$refs.videoPlayer;
@@ -103,7 +111,7 @@ export default {
 <style lang="css" scoped>
 .home_bg {
   width: 100%;
-  height: 1400px;
+  height: 2000px;
 
   background: url("../assets/images/home/1_bg1.png");
   background-size: contain;
@@ -119,8 +127,28 @@ export default {
   width: 100%;
 }
 
+.yun1 {
+  position: absolute;
+  top: 36px;
+  width: 225px;
+  left: 0;
+}
+
+.yun2 {
+  position: absolute;
+  top: 212px;
+  width: 160px;
+  right: 0;
+}
+
+.yun3 {
+  width: 188px;
+  position: absolute;
+  z-index: 999;
+}
+
 .home_bg_xiangyue {
-  top: 240px;
+  top: 340px;
   left: 0px;
   right: 0px;
   width: 100%;

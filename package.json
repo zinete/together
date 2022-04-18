@@ -13,12 +13,15 @@
   "dependencies": {
     "lib-flexible": "^0.3.2",
     "nuxt": "^2.0.0",
-    "nuxt-i18n": "6.10.1",
+    "@nuxtjs/i18n": "^7.2.0",
     "postcss-px2rem-exclude": "0.0.6",
-    "vue-video-player": "^5.0.2"
+    "vue-video-player": "^5.0.2",
+    "element-ui": "^2.15.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "node-sass": "^6.0.1",
+    "sass-loader": "10"
   }
 }

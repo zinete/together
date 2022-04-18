@@ -3,7 +3,7 @@
     <div class="home_bg_color">
       <div style="padding: 40px 0px 0px">
         <div
-          v-for="(items, index) in city"
+          v-for="(items, index) in $t('city')"
           :key="items.id"
           class="relative"
           style="margin-bottom: 40px"
@@ -25,42 +25,35 @@
                 />
               </div>
               <div class="car_bg_btn_view">
-                <div class="car_bg_btn" @click="changeLocation(index)">
+                <div class="car_bg_btn" @click="onChecked(index)">
                   <span>下车游览</span>
                 </div>
               </div>
-
-              <div
-                class="text_box"
-                :style="index !== location ? 'display: none' : 'display: block'"
-              >
-                <!-- <img src="../assets/images/start/2_img1.png" alt="" /> -->
-                <div class="video_box">
-                  <video-player
-                    @play="onPlayerPlay($event, index)"
-                    class="video-player vjs-custom-skin vjs-big-play-centered"
-                    ref="videoPlayer"
-                    :options="playerOptions[index]"
-                  ></video-player>
-                </div>
-                <p>
-                  有一座城，既有千年文化的沉淀，又有灵秀深邃的美景，她是著名的中国青瓷之都、中国宝剑之邦。这座城就是地处浙江省西南部的龙泉市。
-                </p>
-                <p>
-                  浮翠的山峦，环抱着温柔的瓯江源头之水，千年的窑火见证着中国造物之美，千锤百炼的锻打记录着了这座城市的历史跫音，在这里所有的相遇都是久别重逢，一起走进龙泉，去遇见刻在骨子里的诗情画意。
-                </p>
-                <!--   v-for="url in items.shangxi"
-                  :key="url.key" -->
-                <div class="cover_box">
-                  <div
-                    class="cover_box_bg"
-                    v-for="url in items.shangxi"
-                    :key="url.id"
-                  >
-                    <img :src="url" alt="" />
+              <el-collapse-transition>
+                <div class="text_box" v-show="items.checked">
+                  <!-- <img src="../assets/images/start/2_img1.png" alt="" /> -->
+                  <div class="video_box">
+                    <video-player
+                      @play="onPlayerPlay($event, index)"
+                      class="video-player vjs-custom-skin vjs-big-play-centered"
+                      ref="videoPlayer"
+                      :options="playerOptions[index]"
+                    ></video-player>
+                  </div>
+                  <p v-for="des in items.des" :key="des.id">
+                    {{ des }}
+                  </p>
+                  <div class="cover_box">
+                    <div
+                      class="cover_box_bg"
+                      v-for="url in items.shangxi"
+                      :key="url.id"
+                    >
+                      <img :src="url" alt="" />
+                    </div>
                   </div>
                 </div>
-              </div>
+              </el-collapse-transition>
             </div>
           </div>
           <!--  -->
@@ -68,9 +61,22 @@
       </div>
 
       <div class="flex row jcenter">
-        <buttom text="分享本次行程" />
+        <buttom text="分享本次行程" @func="showShare" />
       </div>
     </div>
+
+    <share-pop
+      @confirm="showShare"
+      title=""
+      :mtTop="'-300px'"
+      :dialogHeight="'600px'"
+      :show="share"
+    >
+      <img
+        src="../assets/images/start/share.png"
+        style="width: 100%; font-size: 0"
+      />
+    </share-pop>
   </div>
 </template>
 
@@ -79,102 +85,35 @@ import Buttom from "../components/Buttom.vue";
 import "video.js/dist/video-js.min.css";
 
 import { videoPlayer } from "vue-video-player";
-import title1 from "../assets/images/location/3_title1.png";
-import title2 from "../assets/images/location/3_title2.png";
-import title3 from "../assets/images/location/3_title3.png";
-import title4 from "../assets/images/location/3_title4.png";
-import title5 from "../assets/images/location/3_title5.png";
-import title6 from "../assets/images/location/3_title6.png";
+
+import SharePop from "../components/SharePop.vue";
 
 export default {
-  components: { Buttom, videoPlayer },
+  components: { Buttom, videoPlayer, SharePop },
   data() {
     return {
       playerOptions: [],
+      share: false,
       location: 0,
-      city: [
-        {
-          title: title1,
-          progress: "5%",
-          cover: "../video/cover2.jpg",
-          video: "../video/video2.mp4",
-          shangxi: [
-            "../video/01/1.jpg",
-            "../video/01/2.jpg",
-            "../video/01/3.jpg",
-            "../video/01/4.jpg",
-          ],
-        },
-        {
-          title: title2,
-          progress: "20%",
-          cover: "../video/cover3.jpg",
-          video: "../video/video3.mp4",
-          shangxi: [
-            "../video/02/1.jpg",
-            "../video/02/2.jpg",
-            "../video/02/3.jpg",
-            "../video/02/4.jpg",
-          ],
-        },
-        {
-          title: title3,
-          progress: "30%",
-          cover: "../video/cover4.jpg",
-          video: "../video/video4.mp4",
-          shangxi: [
-            "../video/03/1.jpg",
-            "../video/03/2.jpg",
-            "../video/03/3.jpg",
-            "../video/03/4.jpg",
-          ],
-        },
-        {
-          title: title4,
-          progress: "40%",
-          cover: "../video/cover5.jpg",
-          video: "../video/video5.mp4",
-          shangxi: [
-            "../video/04/1.jpg",
-            "../video/04/2.jpg",
-            "../video/04/3.jpg",
-            "../video/04/4.jpg",
-          ],
-        },
-        {
-          title: title5,
-          progress: "60%",
-          cover: "../video/cover6.jpg",
-          video: "../video/video6.mp4",
-          shangxi: [
-            "../video/05/1.jpg",
-            "../video/05/2.jpg",
-            "../video/05/3.jpg",
-            "../video/05/4.jpg",
-          ],
-        },
-        {
-          title: title6,
-          progress: "80%",
-          cover: "../video/cover7.jpg",
-          video: "../video/video7.mp4",
-          shangxi: [
-            "../video/06/1.jpg",
-            "../video/06/2.jpg",
-            "../video/06/3.jpg",
-            "../video/06/4.jpg",
-          ],
-        },
-      ],
     };
   },
   created() {
     this.initVideo();
   },
   methods: {
-    start() {
-      //  跳转 location 页面
-      this.$router.push("/location");
+    onChecked(key) {
+      this.$t("city").forEach((item) => {
+        if (item.key === key) {
+          item.checked ? (this.checkedAll = false) : null;
+          item.checked = !item.checked;
+        }
+      });
+      !this.$t("city").some((item) => item.checked === false)
+        ? (this.checkedAll = true)
+        : null;
+    },
+    showShare() {
+      this.share = !this.share;
     },
     changeLocation(index) {
       this.location = index;
@@ -186,7 +125,7 @@ export default {
       }
     },
     initVideo() {
-      for (let i of this.city) {
+      for (let i of this.$t("city")) {
         let config = {
           playbackRates: [1.0, 2.0, 3.0], //播放速度
           autoplay: false, //如果true,浏览器准备好时开始回放。
@@ -222,7 +161,7 @@ export default {
 .home_bg {
   width: 100%;
   height: 100% !important;
-  background: url("../assets/images/home/1_bg1.png");
+  background: url("../assets/images/location/bg.png");
   background-size: contain;
   position: relative;
 }
@@ -281,7 +220,7 @@ export default {
 .text_box p {
   text-indent: 1em;
   letter-spacing: 0.2em;
-  margin-top: 10px;
+  margin-top: 30px;
   color: #5e7153;
   line-height: 34px;
 }
@@ -342,9 +281,9 @@ export default {
   margin-right: 8%;
 }
 
-.cover_box_bg img:hover {
+/* .cover_box_bg img:hover {
   cursor: pointer;
   transition: all 0.6s ease-out;
   transform: scale(1.5);
-}
+} */
 </style>

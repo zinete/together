@@ -11,7 +11,7 @@ export default {
     title: "一剑钟情，从瓷开始",
     meta: [
       { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "viewport", content: "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" },
       {
         hid: "description",
         name: "description",
@@ -23,11 +23,11 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: "#000" },
+  loading: { color: "#8652F8" },
   /*
    ** Global CSS
    */
-  css: ["assets/css/main.css"],
+  css: ["assets/css/main.css", "element-ui/lib/theme-chalk/index.css",],
   /*
    ** Plugins to load before mounting the App
    */
@@ -35,13 +35,13 @@ export default {
     {
       src: "@/plugins/lib-flexible",
     },
-    { src: "@/plugins/i18n.js" },
+    { src: "@/plugins/ElementUI" },
   ],
 
   /*
    ** Nuxt.js modules
    */
-  modules: [["nuxt-i18n", I18N]],
+  modules: [["@nuxtjs/i18n", I18N]],
   /*
    ** Build configuration
    */
@@ -57,6 +57,10 @@ export default {
         },
       },
     },
-    extend(config, ctx) { },
+    extend(config, { isClient, isDev }) {
+      if (isClient && !isDev) {
+        config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true;
+      }
+    },
   },
 };
