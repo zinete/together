@@ -176,15 +176,11 @@ export default {
 }
 
 .home_bg_xiangyue {
-  top: 100px;
-  left: 0px;
-  right: 0px;
-  width: 100%;
-  /* background-attachment: fixed !important; */
   padding-bottom: 80px;
   background-size: 92% 100% !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+  /* background-attachment: fixed !important; */
   background: url("../assets/images/start/2_bg.png");
 }
 .home_bg_xiangyue_box {
