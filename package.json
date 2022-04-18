@@ -1,0 +1,24 @@
+{
+  "name": "nuxtjs",
+  "version": "1.0.0",
+  "description": "together",
+  "author": "zhenghui",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt generate",
+    "start": "nuxt start",
+    "local": "cross-env NUXT_HOST=192.168.0.110 NUXT_PORT=3005 nuxt"
+  },
+  "dependencies": {
+    "lib-flexible": "^0.3.2",
+    "nuxt": "^2.0.0",
+    "nuxt-i18n": "6.10.1",
+    "postcss-px2rem-exclude": "0.0.6",
+    "vue-video-player": "^5.0.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.7"
+  }
+}
