@@ -35,7 +35,12 @@
             <img
               src="../assets/images/location/btn.png"
               alt=""
-              style="width: 100px; padding: 20px 0px 0px; display: block"
+              style="
+                width: 100px;
+                height: 52px;
+                padding: 20px 0px 0px;
+                display: block;
+              "
             />
           </div>
         </div>
