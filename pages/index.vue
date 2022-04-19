@@ -45,11 +45,20 @@ export default {
 <style lang="css" scoped>
 .home_bg {
   width: 100%;
-  height: 2000px;
-
+  height: 100vh;
   background: url("../assets/images/home/1_bg1.png");
   background-size: contain;
   position: relative;
+}
+
+@media only screen and (min-width: 1200px) {
+  .home_bg {
+    width: 100%;
+    height: 140vh;
+    background: url("../assets/images/home/1_bg1.png");
+    background-size: contain;
+    position: relative;
+  }
 }
 
 .home_bg_color {

@@ -3,7 +3,7 @@ export default {
   city: [
     {
       title: '../video/3_title1.png',
-      checked: true,
+      checked: false,
       key: 0,
       progress: "5%",
       cover: "../video/cover2.jpg",

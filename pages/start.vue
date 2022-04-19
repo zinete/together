@@ -62,11 +62,11 @@ export default {
   },
   methods: {
     start() {
-      //  跳转 location 页面
+      //  跳转 site 页面
 
       this.$router.push(
         this.localeLocation({
-          name: "location",
+          name: "site",
         })
       );
     },
@@ -111,13 +111,21 @@ export default {
 <style lang="css" scoped>
 .home_bg {
   width: 100%;
-  height: 2000px;
-
+  height: 100vh;
   background: url("../assets/images/home/1_bg1.png");
   background-size: contain;
   position: relative;
 }
 
+@media only screen and (min-width: 1200px) {
+  .home_bg {
+    width: 100%;
+    height: 1400px;
+    background: url("../assets/images/home/1_bg1.png");
+    background-size: contain;
+    position: relative;
+  }
+}
 .home_bg_color {
   width: 100%;
   height: 100%;
@@ -136,7 +144,7 @@ export default {
 
 .yun2 {
   position: absolute;
-  top: 212px;
+  top: 140px;
   width: 160px;
   right: 0;
 }
@@ -148,11 +156,11 @@ export default {
 }
 
 .home_bg_xiangyue {
-  top: 340px;
+  top: 250px;
   left: 0px;
   right: 0px;
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 100px;
   background-size: 92% 100% !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
@@ -186,16 +194,17 @@ export default {
   width: 100%;
 }
 .text_box {
-  margin-top: 20px;
+  margin-top: 50px;
   font-size: 28px;
   font-weight: 400;
 }
 
 .text_box p {
-  text-indent: 1em;
+  text-indent: 2em;
   letter-spacing: 0.2em;
   margin-top: 10px;
   color: #5e7153;
-  line-height: 34px;
+  text-align: justify;
+  line-height: 42px;
 }
 </style>

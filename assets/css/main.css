@@ -1,6 +1,6 @@
 page-enter-active,
 .page-leave-active {
-  transition: opacity 0.25s;
+  transition: opacity 0.5ms;
 }
 
 .page-enter,
@@ -48,12 +48,12 @@ page-enter-active,
 
 
 @media only screen and (min-width: 1200px) {
+
+
   body {
     width: 750px;
-    background: #0e2613c2;
     margin: 0 auto;
     height: 100%;
-    background-size: cover;
   }
 }
 

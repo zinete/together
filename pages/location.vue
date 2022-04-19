@@ -177,12 +177,16 @@ export default {
 
 .home_bg_xiangyue {
   padding-bottom: 80px;
-  background-size: 92% 100% !important;
+  width: 92%;
+  margin: 0 auto;
+  /* background-size: 92% 100% !important; */
   background-repeat: no-repeat !important;
   background-position: center !important;
-  /* background-attachment: fixed !important; */
-  background: url("../assets/images/start/2_bg.png");
+  background-attachment: fixed !important;
+  /* background: url("../assets/images/start/2_bg.png"); */
+  background: #f3ece6;
 }
+
 .home_bg_xiangyue_box {
   height: 48px;
   background: #5e7153;
@@ -199,12 +203,12 @@ export default {
   top: -40px;
 }
 .start_info {
-  width: 80%;
+  width: 100%;
   margin-top: 80px;
-  margin-right: 20px;
 }
 .start_info img {
   width: 100%;
+  padding: 0px 20px;
 }
 .text_box {
   margin-top: 30px;
@@ -213,11 +217,12 @@ export default {
 }
 
 .text_box p {
-  text-indent: 1em;
+  text-indent: 2em;
   letter-spacing: 0.2em;
+  text-align: justify;
   margin-top: 30px;
   color: #5e7153;
-  line-height: 34px;
+  line-height: 42px;
 }
 .car_bg {
   background: url("../assets/images/location/3_lu.png");
