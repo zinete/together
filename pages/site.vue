@@ -57,6 +57,15 @@
               >
                 {{ des }}
               </p>
+              <div class="cover_box">
+                <div
+                  class="cover_box_bg"
+                  v-for="url in items.shangxi"
+                  :key="url.id"
+                >
+                  <img :src="url" alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </el-collapse-transition>
@@ -169,7 +178,7 @@ export default {
 .home_bg_color {
   width: 100%;
   height: 100%;
-  background: #3a4934;
+  background: #0e2613c2;
   padding-bottom: 100px;
 }
 
@@ -189,6 +198,30 @@ export default {
   align-items: center;
 
   justify-content: center;
+}
+
+.cover_box {
+  gap: 30px;
+  width: 100%;
+
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 0px;
+}
+.cover_box_bg {
+  width: 38%;
+  height: 184px;
+  /* margin-top: 40px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/images/location/3_img_bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.cover_box_bg img {
+  width: 75%;
+  /* margin-right: 6%; */
 }
 
 .video_box {

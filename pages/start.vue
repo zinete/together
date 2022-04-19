@@ -10,7 +10,6 @@
         <div class="flex col icenter absolute zindex10 home_bg_xiangyue">
           <img src="../assets/images/start/2_ooo.png" alt="" class="top_icon" />
           <div class="start_info">
-            <!-- <img src="../assets/images/start/2_img1.png" alt="" /> -->
             <div class="video_box">
               <video-player
                 @play="onPlayerPlay($event, 0)"
@@ -111,7 +110,7 @@ export default {
 <style lang="css" scoped>
 .home_bg {
   width: 100%;
-  height: 100vh;
+  height: 1400px;
   background: url("../assets/images/home/1_bg1.png");
   background-size: contain;
   position: relative;
@@ -130,6 +129,8 @@ export default {
   width: 100%;
   height: 100%;
   background: #0e2613c2;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .home_bg_title {
   width: 100%;
@@ -157,11 +158,11 @@ export default {
 
 .home_bg_xiangyue {
   top: 250px;
-  left: 0px;
+  left: 30px;
   right: 0px;
-  width: 100%;
+  /* width: 100%; */
   padding-bottom: 100px;
-  background-size: 92% 100% !important;
+  background-size: 100% 100% !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   background: url("../assets/images/start/2_bg.png");
