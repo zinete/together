@@ -62,7 +62,22 @@
         </el-collapse-transition>
         <div class="footer"></div>
       </div>
+      <div class="flex row jcenter" style="margin-top: 30px">
+        <buttom text="分享本次行程" @func="showShare" />
+      </div>
     </div>
+    <share-pop
+      @confirm="showShare"
+      title=""
+      :mtTop="'-300px'"
+      :dialogHeight="'600px'"
+      :show="share"
+    >
+      <img
+        src="../assets/images/start/share.png"
+        style="width: 100%; font-size: 0"
+      />
+    </share-pop>
   </div>
 </template>
 
@@ -195,11 +210,11 @@ export default {
 }
 .mid {
   background: url("../assets/images/location/mid.png") no-repeat;
-  background-size: 100% 100%;
+
   flex-direction: column;
-  vertical-align: baseline;
-  background-attachment: fixed;
-  width: 100%;
+  background-size: 100% 100%;
+  /* background-attachment: fixed; */
+  /* width: 100%; */
 }
 .text_main {
   /* height: 1000px; */
