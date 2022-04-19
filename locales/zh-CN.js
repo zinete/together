@@ -99,7 +99,7 @@ export default {
       title: '../video/3_title6.png',
       checked: false,
       key: 5,
-      progress: "80%",
+      progress: "78%",
       cover: "../video/cover7.jpg",
       video: "../video/video7.mp4",
       des: [

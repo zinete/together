@@ -208,9 +208,7 @@ export default {
 }
 
 .cover_box {
-  gap: 30px;
   width: 100%;
-
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
@@ -219,6 +217,7 @@ export default {
 .cover_box_bg {
   width: 38%;
   height: 184px;
+  margin: 20px;
   /* margin-top: 40px; */
   display: flex;
   justify-content: center;

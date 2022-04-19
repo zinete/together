@@ -45,7 +45,7 @@ export default {
 <style lang="css" scoped>
 .home_bg {
   width: 100%;
-  height: 1400px;
+  height: 100vh;
   background: url("../assets/images/home/1_bg1.png");
   background-size: contain;
   position: relative;
