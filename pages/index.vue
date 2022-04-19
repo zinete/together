@@ -61,12 +61,12 @@ export default {
   }
 }
 
-.home_bg_color {
+/* .home_bg_color {
   width: 100%;
   height: 100%;
   background: #0e2613c2;
   position: relative;
-}
+} */
 
 /* .home_mt {
   top: 20px;
