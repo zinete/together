@@ -26,9 +26,11 @@
             @click="onChecked(index)"
             style="
               font-size: 0px;
-              margin-right: 32px;
+
               cursor: pointer;
               user-select: none;
+              width: 80%;
+              margin: 0 auto;
             "
             class="flex jend"
           >
@@ -237,6 +239,7 @@ export default {
 .bg_lu_car {
   position: absolute;
   width: 120px;
+  top: -15px;
 }
 .header {
   background: url("../assets/images/location/top.png") no-repeat;
