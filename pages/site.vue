@@ -3,11 +3,12 @@
     <div class="home_bg">
       <div class="mian" v-for="(items, index) in $t('city')" :key="items.id">
         <div class="header">
-          <img
+          <el-image
             :src="items.title"
-            alt=""
+            lazy
             style="width: 80%; margin: 60px auto 30px"
-          />
+            fits="cover"
+          ></el-image>
           <div class="bg_lu">
             <img
               src="../assets/images/location/3_lu.png"
@@ -70,7 +71,13 @@
                   v-for="url in items.shangxi"
                   :key="url.id"
                 >
-                  <img :src="url" alt="" />
+                  <!-- <img :src="url" alt="" /> -->
+                  <el-image
+                    class="elimg"
+                    :src="url"
+                    lazy
+                    fits="cover"
+                  ></el-image>
                 </div>
               </div>
             </div>
@@ -225,7 +232,7 @@ export default {
   background: url("../assets/images/location/3_img_bg.png") no-repeat;
   background-size: 100% 100%;
 }
-.cover_box_bg img {
+.cover_box_bg .elimg {
   width: 75%;
   /* margin-right: 6%; */
 }
@@ -256,7 +263,7 @@ export default {
   /* background-attachment: fixed; */
   /* width: 100%; */
 }
-.text_main {
+.text_main p {
   /* height: 1000px; */
   font-size: 32px;
   text-indent: 2em;
