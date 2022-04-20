@@ -184,13 +184,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home_bg {
-  width: 100%;
-  height: 100% !important;
+.home_bg::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: url("https://static.zinete.com/3_bg.png") no-repeat;
-  background-size: contain;
-  position: relative;
-  background-attachment: fixed;
+  background-size: cover;
+}
+
+.home_bg {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
 }
 .home_bg_color {
   width: 100%;
