@@ -86,7 +86,6 @@
           </div>
         </el-collapse-transition>
         <div class="footer"></div>
-        <!-- <img src="../assets/images/location/footer.png" style="width: 100%" /> -->
       </div>
       <div class="flex row jcenter">
         <buttom text="分享本次行程" @func="showShare" />
@@ -278,7 +277,7 @@ export default {
 
   flex-direction: column;
   background-size: 100% 100%;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   /* width: 100%; */
 }
 .text_main p {
@@ -297,5 +296,6 @@ export default {
   background-size: cover;
   background-size: 100% 100%;
   height: 100px;
+  margin-top: -10px;
 }
 </style>
