@@ -6,7 +6,7 @@
           <el-image
             :src="items.title"
             lazy
-            style="width: 80%; margin: 60px auto 30px"
+            style="width: 80%; margin: 60px auto 5px"
             fits="cover"
           ></el-image>
           <div class="bg_lu">
@@ -15,11 +15,13 @@
               style="width: 90%"
               alt=""
             />
-            <img
+            <el-image
+              lazy
               :style="`left: ${items.progress}`"
-              src="../assets/images/location/3_car.png"
+              :src="items.tips"
               class="bg_lu_car"
               alt=""
+              fits="cover"
             />
           </div>
 
@@ -38,12 +40,7 @@
             <img
               src="../assets/images/location/btn.png"
               alt=""
-              style="
-                width: 100px;
-                height: 52px;
-                padding: 20px 0px 0px;
-                display: block;
-              "
+              style="width: 100px; margin-top: 10px; display: block"
             />
           </div>
         </div>
@@ -84,8 +81,9 @@
           </div>
         </el-collapse-transition>
         <div class="footer"></div>
+        <!-- <img src="../assets/images/location/footer.png" style="width: 100%" /> -->
       </div>
-      <div class="flex row jcenter" style="margin-top: 30px">
+      <div class="flex row jcenter">
         <buttom text="分享本次行程" @func="showShare" />
       </div>
     </div>
@@ -184,7 +182,7 @@ export default {
 .home_bg {
   width: 100%;
   height: 100% !important;
-  background: url("../assets/images/location/3_bg1.png");
+  background: url("https://static.zinete.com/3_bg.png") no-repeat;
   background-size: contain;
   position: relative;
   background-attachment: fixed;
@@ -200,9 +198,12 @@ export default {
   justify-content: flex-end;
 }
 
+.mian:first-child {
+  padding-top: 40px;
+}
 .mian {
   font-size: 0px;
-  padding-top: 80px;
+
   width: 100%;
 }
 
@@ -244,8 +245,8 @@ export default {
 }
 .bg_lu_car {
   position: absolute;
-  width: 120px;
-  top: -15px;
+  width: 240px;
+  top: -40px;
 }
 .header {
   background: url("../assets/images/location/top.png") no-repeat;
@@ -265,7 +266,7 @@ export default {
 }
 .text_main p {
   /* height: 1000px; */
-  font-size: 32px;
+  font-size: 28px;
   text-indent: 2em;
   letter-spacing: 0.2em;
   text-align: justify;
@@ -275,9 +276,9 @@ export default {
 }
 .footer {
   vertical-align: baseline;
-  background: url("../assets/images/location/bottom.png") no-repeat;
+  background: url("../assets/images/location/bottom.png") no-repeat 0px -54px;
   background-size: cover;
   background-size: 100% 100%;
-  height: 60px;
+  height: 100px;
 }
 </style>

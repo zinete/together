@@ -189,25 +189,25 @@ export default {
   top: -40px;
 }
 .start_info {
-  width: 80%;
+  width: 86%;
   margin-top: 80px;
-  margin-right: 20px;
+  margin-right: 28px;
 }
 .start_info img {
   width: 100%;
 }
 .text_box {
   margin-top: 50px;
-  font-size: 28px;
-  font-weight: 400;
 }
 
 .text_box p {
+  font-weight: 400;
   text-indent: 2em;
   letter-spacing: 0.2em;
   margin-top: 10px;
   color: #5e7153;
   text-align: justify;
   line-height: 42px;
+  font-size: 28px;
 }
 </style>
