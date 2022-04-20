@@ -49,7 +49,6 @@ export default {
     },
     dialogHeight: {
       type: String,
-      default: "420px",
       required: false,
     },
     transform: {
