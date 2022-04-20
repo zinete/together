@@ -40,7 +40,12 @@
             <img
               src="../assets/images/location/btn.png"
               alt=""
-              style="width: 100px; margin-top: 10px; display: block"
+              style="
+                width: 100px;
+                margin-top: 10px;
+                display: block;
+                height: 34px;
+              "
             />
           </div>
         </div>
