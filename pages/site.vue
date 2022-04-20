@@ -88,7 +88,7 @@
         <div class="footer"></div>
       </div>
       <div class="flex row jcenter">
-        <buttom text="分享本次行程" @func="showShare" />
+        <buttom text="打卡留念" @func="showShare" />
       </div>
     </div>
     <share-pop
@@ -99,7 +99,7 @@
       :show="share"
     >
       <img
-        src="../assets/images/start/share.png"
+        src="https://static.zinete.com/haobao.png"
         style="width: 100%; font-size: 0"
       />
     </share-pop>

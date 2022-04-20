@@ -11,7 +11,7 @@
           <div class="home_bg_xiangyue_box flex row icenter">
             <span>相约一场“奇遇”之旅</span>
           </div>
-          <img src="../assets/images/home/1_piao.png" alt="票" class="piao" />
+          <img src="https://static.zinete.com/jipiao.png" alt="票" class="piao" />
 
           <div class="btn_view absolute">
             <buttom @func="start" text="即刻出发" />

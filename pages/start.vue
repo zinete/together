@@ -27,7 +27,7 @@
               </p>
             </div>
           </div>
-          <buttom @func="start" text="开启本次行程" class="btn_view" />
+          <buttom @func="start" text="开启旅程" class="btn_view" />
         </div>
       </div>
 
