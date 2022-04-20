@@ -91,13 +91,7 @@
         <buttom text="打卡留念" @func="showShare" />
       </div>
     </div>
-    <share-pop
-      @confirm="showShare"
-      title=""
-      :mtTop="'-300px'"
-      :dialogHeight="'600px'"
-      :show="share"
-    >
+    <share-pop @confirm="showShare" title="" :mtTop="'-300px'" :show="share">
       <img
         src="https://static.zinete.com/haobao.png"
         style="width: 100%; font-size: 0"
