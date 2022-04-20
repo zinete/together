@@ -7,7 +7,9 @@ export default {
       key: 0,
       progress: "5%",
       cover: "../video/cover2.jpg",
+      cdn_cover: "https://static.zinete.com/cover2.jpg",
       video: "../video/video2.mp4",
+      cdn_video: "https://static.zinete.com/video2.mp4",
       des: [
         '读懂一座城，应该先从博物馆开始。龙泉青瓷博物馆是世界上唯一系统介绍龙泉窑发展历史和人类非物质文化遗产的专题博物馆。',
         '龙泉青瓷博物馆的展览内容主要以展示龙泉窑历史及“人类非遗”——龙泉青瓷传统烧制技术等相关专题为主线，共推出“青瓷的记忆”、“土与火的交响”、“瓷海明珠”等十多个基本陈列展览。展览充分利用声、光、电、动漫、幻影成像等现代高科技手段，体现“参与、互动、体验式、场景化”展示理念，在这里可以来一场奇妙的「青瓷记忆」之旅。'
@@ -26,7 +28,9 @@ export default {
       key: 1,
       progress: "20%",
       cover: "../video/cover3.jpg",
+      cdn_cover: "https://static.zinete.com/cover3.jpg",
       video: "../video/video3.mp4",
+      cdn_video: "https://static.zinete.com/video3.mp4",
       des: [
         '龙窑是采用传统技艺烧制龙泉青瓷的窑场，从三国两晋一直烧到清末，窑火延续了1700余年，烧出了龙泉青瓷明如镜、声如磬、釉如玉。在龙泉宝溪乡，有国内外最大的古龙窑群，这样的龙窑依山而建，窑洞逐级向上，十分壮观。',
         '龙泉青瓷传统烧制技艺是以龙泉一带的瓷土、紫金土、石灰石和石英等为原料，以手工拉坯成型技术、家传配料方法，用窑炉高温（1200℃—1300℃左右）烧制青瓷的一种传统手工技艺。在不同窑火温度下，变幻出粉青、梅子青、灰青、米黄等颜色。',
@@ -45,7 +49,9 @@ export default {
       key: 2,
       progress: "30%",
       cover: "../video/cover4.jpg",
+      cdn_cover: "https://static.zinete.com/cover4.jpg",
       video: "../video/video4.mp4",
+      cdn_video: "https://static.zinete.com/video4.mp4",
       des: [
         '再出发去瓯江上游古意幽深的一隅——琉华山下一处著名海内外的古青瓷遗址：大窑龙泉窑国家考古遗址公园。',
         '大窑以它独特的魅力吸引着人们。走进大窑龙泉窑国家考古遗址公园，仿佛走进了古青瓷的艺术殿堂，走进了露天的青瓷博物馆。无论你走入哪一处窑址，都可以看见堆积如山精美的瓷片和千姿百态的窑具。',
@@ -64,7 +70,9 @@ export default {
       key: 3,
       progress: "40%",
       cover: "../video/cover5.jpg",
+      cdn_cover: "https://static.zinete.com/cover5.jpg",
       video: "../video/video5.mp4",
+      cdn_video: "https://static.zinete.com/video5.mp4",
       des: [
         '金村位于龙泉市小梅镇，在群山环绕之中，独享一方悠闲宁静天地。也是古代青瓷海上丝绸之路起始站之一。',
         '这里保留大量的古窑址群，这些窑区地段狭长，群山环抱。这里也是古时候瓯江上游的第一个码头。从五代开始金村的瓷器便从此处运往大山外的世界，龙泉青瓷就是从那时起开始走向世界各地。',
@@ -83,7 +91,9 @@ export default {
       key: 4,
       progress: "60%",
       cover: "../video/cover6.jpg",
+      cdn_cover: "https://static.zinete.com/cover6.jpg",
       video: "../video/video6.mp4",
+      cdn_video: "https://static.zinete.com/video6.mp4",
       des: [
         '中国青瓷小镇最引人注目的是嵌在河栏中的两个瓷瓶，线条流畅地相互凝视着，像是徐徐开启了一扇门。 “中国青瓷小镇”六个铁艺大字，已是锈迹斑斑，这并非疏于打理，而是一种聪明的致敬方式，致敬传统，致敬岁月。',
         '“披云一日，青瓷千年”，青瓷文化园是青瓷小镇的核心。到这里，看着一件件的瓷器，不经意邂逅龙泉青瓷闪烁的千年流光，与她有一场跨越千年的遇见。'
@@ -101,7 +111,9 @@ export default {
       key: 5,
       progress: "78%",
       cover: "../video/cover7.jpg",
+      cdn_cover: "https://static.zinete.com/cover7.jpg",
       video: "../video/video7.mp4",
+      cdn_video: "https://static.zinete.com/video7.mp4",
       des: [
         '古之言剑，必言龙泉。龙泉宝剑是名闻中外的民间艺术品，已经有2500多年的历史。相传春秋末期，铸剑大师欧冶子奉楚王之命铸剑，遍访江南名山大川寻找铸剑佳地。欧冶子的铸剑技艺在龙泉深深扎根，世代相传。龙泉宝剑以锋刃锐利、寒光逼人、刚柔并济、纹饰巧妙等特点闻名遐迩。',
         '走进沈广隆剑铺，你将深深的被这家有着120多年历史的剑铺所吸引，沈广隆剑铺延续至今已有六代传人。在这里，你能看到铸剑师在火花四溅中锻造宝剑，也能亲自体验宝剑锻造的每一道工序。'
