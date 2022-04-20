@@ -185,6 +185,7 @@ export default {
 <style lang="scss" scoped>
 .home_bg::before {
   content: "";
+
   position: fixed;
   z-index: -1;
   top: 0;
@@ -197,7 +198,6 @@ export default {
 
 .home_bg {
   display: block;
-  position: absolute;
   left: 0;
   top: 0;
   z-index: 10;
@@ -207,7 +207,16 @@ export default {
   width: 100%;
   height: 100%;
   padding-bottom: 100px;
-  background: #3a4934;
+}
+
+@media only screen and (min-width: 1200px) {
+  .home_bg::before {
+    width: 750px;
+    margin: 0 auto;
+  }
+  .mid {
+    background-attachment: scroll !important;
+  }
 }
 
 .jend {
