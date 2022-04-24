@@ -2,19 +2,19 @@
   <div class="home_bg">
     <div class="home_bg_color">
       <div class="relative">
-        <img
-          src="../assets/images/home/1_title.png"
-          class="home_bg_title"
-          alt="一剑钟情"
-        />
+        <img :src="$t('indeximg')" class="home_bg_title" alt="一剑钟情" />
         <div class="flex col icenter absolute zindex10 home_bg_xiangyue">
           <div class="home_bg_xiangyue_box flex row icenter">
             <span>相约一场“奇遇”之旅</span>
           </div>
-          <img src="https://static.zinete.com/jipiao.png" alt="票" class="piao" />
+          <img
+            src="https://static.zinete.com/jipiao.png"
+            alt="票"
+            class="piao"
+          />
 
           <div class="btn_view absolute">
-            <buttom @func="start" text="即刻出发" />
+            <buttom @func="start" :text="$t('indextitle')" />
           </div>
         </div>
       </div>
@@ -29,6 +29,20 @@
 import Buttom from "../components/Buttom.vue";
 export default {
   components: { Buttom },
+  mounted() {
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+    // We listen to the resize event
+    window.addEventListener("resize", () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      console.log(vh);
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    });
+  },
   methods: {
     start() {
       // 跳转到 start 页面
@@ -45,7 +59,8 @@ export default {
 <style lang="css" scoped>
 .home_bg {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  height: calc(var(--vh, 1vh) * 100);
   background: url("../assets/images/home/1_bg1.png");
   background-size: contain;
   position: relative;

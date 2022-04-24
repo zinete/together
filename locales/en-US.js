@@ -1,8 +1,28 @@
 export default {
-  lang: "cn",
+  lang: "en",
+  share: '../video/title/en/share_en.png',
+  indeximg: '../images/1_title_en.png',
+  startimg: "../images/2_title_en.png",
+  sitego: "Must go places",
+  sitetitle: "Go",
+  indextitle: "Beginning now",
+  starttitle: "Start the journey",
+  startVideo: [
+    {
+      progress: "0%",
+      cover: "../video/cover1.jpg",
+      cdn_cover: "https://static.zinete.com/cover1.jpg",
+      video: "../video/video1.mp4",
+      cdn_video: "https://static.zinete.com/video1.mp4",
+      des: [
+        'There is a city has both the precipitation of thousands years  culture and the profound beauty. She is Longquan, who is  the capital of Chinese celadon and the home of swords , which is located in the southwest of Zhejiang Province in China. ',
+        'The emerald mountains, surrounded by the gentle water at the source of the Ou River, the thousand-year-old kiln fire witnesses of the beauty of Chinese creations, and the sounds of forging records the history of the city.                                                                                     All encounters here are reunions after a long separation. Walking into Longquan, to meet the poetic and picturesque deeply.'
+      ],
+    },
+  ],
   city: [
     {
-      title: '../video/3_title1.png',
+      title: '../video/title/en/1.png',
       checked: false,
       key: 0,
       progress: "5%",
@@ -12,19 +32,31 @@ export default {
       video: "../video/video2.mp4",
       cdn_video: "https://static.zinete.com/video2.mp4",
       des: [
-        '读懂一座城，应该先从博物馆开始。龙泉青瓷博物馆是世界上唯一系统介绍龙泉窑发展历史和人类非物质文化遗产的专题博物馆。',
-        '龙泉青瓷博物馆的展览内容主要以展示龙泉窑历史及“人类非遗”——龙泉青瓷传统烧制技术等相关专题为主线，共推出“青瓷的记忆”、“土与火的交响”、“瓷海明珠”等十多个基本陈列展览。展览充分利用声、光、电、动漫、幻影成像等现代高科技手段，体现“参与、互动、体验式、场景化”展示理念，在这里可以来一场奇妙的「青瓷记忆」之旅。'
+        'To know a city, you`d better start with a museum. The Longquan Celadon Museum is the only one that systematically introduces the development of Longquan kiln and human intangible cultural heritage in the world',
+        'The exhibition content of Longquan Celadon Museum mainly focuses on displaying the history of Longquan kiln and "intangible cultural heritage of mankind" - the traditional firing technology of Longquan celadon and other related topics, more than 10 basic exhibitions such as "Pearl of Celadon". The exhibition makes full use of modern high-tech means such as sound, light, electricity, cartoon and phantom imaging, and reflects the display concept of "participation, interaction, experience, and sceography". Here, you can have a wonderful  "memory of celadon" journey.'
       ],
 
       shangxi: [
-        "../video/01/1.jpg",
-        "../video/01/2.jpg",
-        "../video/01/3.jpg",
-        "../video/01/4.jpg",
+        {
+          img: "../video/01/1.jpg",
+          des: "Longquan Celadon Museum",
+        },
+        {
+          img: "../video/01/2.jpg",
+          des: "Porcelain From the Old Kiln",
+        },
+        {
+          img: "../video/01/3.jpg",
+          des: "Porcelain From the Old Kiln",
+        },
+        {
+          img: "../video/01/4.jpg",
+          des: "Process of Longquan Celadon Production",
+        },
       ],
     },
     {
-      title: '../video/3_title2.png',
+      title: '../video/title/en/2.png',
       checked: false,
       key: 1,
       progress: "5%",
@@ -34,19 +66,31 @@ export default {
       video: "../video/video3.mp4",
       cdn_video: "https://static.zinete.com/video3.mp4",
       des: [
-        '龙窑是采用传统技艺烧制龙泉青瓷的窑场，从三国两晋一直烧到清末，窑火延续了1700余年，烧出了龙泉青瓷明如镜、声如磬、釉如玉。在龙泉宝溪乡，有国内外最大的古龙窑群，这样的龙窑依山而建，窑洞逐级向上，十分壮观。',
-        '龙泉青瓷传统烧制技艺是以龙泉一带的瓷土、紫金土、石灰石和石英等为原料，以手工拉坯成型技术、家传配料方法，用窑炉高温（1200℃—1300℃左右）烧制青瓷的一种传统手工技艺。在不同窑火温度下，变幻出粉青、梅子青、灰青、米黄等颜色。',
-        '古时一件珍品瓷器出窑，不亚于一场盛大的狂欢。虽然我们无法穿越回古代，看一看那些传世美瓷的形貌，却可以在这里体验现代珍宝的诞生，重拾古窑的记忆。'
+        'Long kiln is a kiln that uses traditional techniques to make Longquan celadon. From the Three Kingdoms period and Jin Dynasties to the end of the Qing Dynasty, the kiln fire lasted for more than 1,700 years. The Longquan celadon was as bright as a mirror, with a sound like a chime, and a glaze like jade. Baoxi town in Longquan has the largest group of ancient Long kilns at home and abroad. These Long kilns are built on mountains, and the cave dwellings go up layer by layer, which are very spectacular.  ',
+        'The traditional firing technique of Longquan celadon is based on the porcelain clay, purple gold clay, limestone and quartz  found in the Longquan area as raw materials, with hand-drawn forming technology and family-herited batching method, firing celadon at high temperature (about 1200℃-1300℃) in a kiln . Under different fire temperatures, it changes into pink green, plum green, gray green, beige and other colors. In ancient times, when a treasured porcelain came out of the kiln, it was no less than a grand carnival. ',
+        'Although we can`t travel back and take a look at the appearance of those beautiful porcelains that have been handed down, we can experience the birth of modern treasures here and regain the memory of ancient kilns'
       ],
       shangxi: [
-        "../video/02/1.jpg",
-        "../video/02/2.jpg",
-        "../video/02/3.jpg",
-        "../video/02/4.jpg",
+        {
+          img: "../video/02/1.jpg",
+          des: "Millennium Long Kiln",
+        },
+        {
+          img: "../video/02/2.jpg",
+          des: "Open the Kiln",
+        },
+        {
+          img: "../video/02/3.jpg",
+          des: "Everlasting Kiln Fire",
+        },
+        {
+          img: "../video/02/4.jpg",
+          des: "Kiln Opening Ceremony",
+        },
       ],
     },
     {
-      title: '../video/3_title3.png',
+      title: '../video/title/en/3.png',
       checked: false,
       key: 2,
       progress: "5%",
@@ -56,19 +100,31 @@ export default {
       video: "../video/video4.mp4",
       cdn_video: "https://static.zinete.com/video4.mp4",
       des: [
-        '再出发去瓯江上游古意幽深的一隅——琉华山下一处著名海内外的古青瓷遗址：大窑龙泉窑国家考古遗址公园。',
-        '大窑以它独特的魅力吸引着人们。走进大窑龙泉窑国家考古遗址公园，仿佛走进了古青瓷的艺术殿堂，走进了露天的青瓷博物馆。无论你走入哪一处窑址，都可以看见堆积如山精美的瓷片和千姿百态的窑具。',
-        '在古窑间行走，犹如听到古代匠人们神思飞动的声音；一伸手拣一片如翡翠般的瓷片，感受着充满灵气的艺术构思。'
+        'Our next stop will go to the ancient corner of the upper Ou River - an ancient celadon site which is located at the foot of Liuhua Mountain: Dayao Longquan Kiln National Archaeological Site Park.',
+        'Dayao attracts people with its unique charm. Exploring the Longquan Kiln National Archaeological Site Park in Dayao is like walking into the art gallery of ancient celadon and into the open-air celadon museum. No matter which kiln site you walk into, you can see a lot of exquisite porcelain pieces and kiln furniture in a variety of expressions. ',
+        'It seems you can hear the sound of ancient craftsmen`s flying mind when walking in the old kilns. If you pick up a piece of jade-like porcelain, also can feel the artistic conception full of arua.  '
       ],
       shangxi: [
-        "../video/03/1.jpg",
-        "../video/03/2.jpg",
-        "../video/03/3.jpg",
-        "../video/03/4.jpg",
+        {
+          img: "../video/03/1.jpg",
+          des: "Dayao Longquan Kiln National Archaeological Site Park",
+        },
+        {
+          img: "../video/03/2.jpg",
+          des: "Panorama of Dayao Fengdong Rock Site ",
+        },
+        {
+          img: "../video/03/3.jpg",
+          des: "Memory of Dayao ",
+        },
+        {
+          img: "../video/03/4.jpg",
+          des: "Charming of Dayao",
+        },
       ],
     },
     {
-      title: '../video/3_title4.png',
+      title: '../video/title/en/4.png',
       checked: false,
       key: 3,
       progress: "5%",
@@ -78,19 +134,31 @@ export default {
       video: "../video/video5.mp4",
       cdn_video: "https://static.zinete.com/video5.mp4",
       des: [
-        '金村位于龙泉市小梅镇，在群山环绕之中，独享一方悠闲宁静天地。也是古代青瓷海上丝绸之路起始站之一。',
-        '这里保留大量的古窑址群，这些窑区地段狭长，群山环抱。这里也是古时候瓯江上游的第一个码头。从五代开始金村的瓷器便从此处运往大山外的世界，龙泉青瓷就是从那时起开始走向世界各地。',
-        '在这里你可以感受到最质朴的生活气息，江水、古树、木屋、石桥、风车、石径构成了一幅宁静生活的美好画卷。'
+        'Jin Village is located in Xiaomei Town, Longquan City. Surrounded by mountains, it enjoys a leisurely and peaceful world. It is also one of the starting stations of the ancient celadon Maritime Silk Road. ',
+        'A large number of ancient kiln sites are preserved here. These kiln areas are long and narrow, surrounded by mountains. Here is also the first wharf in the upper Ou River in old times. Since the Five Dynasties, the porcelain made in Jincun has been transported from here to the world, and Longquan celadon has been going to all over the world since then. ',
+        'You can feel the most plain and simple life here. Rivers, ancient trees, wooden houses, stone bridges, windmills and stone paths make a beautiful picture of peaceful life.  '
       ],
       shangxi: [
-        "../video/04/1.jpg",
-        "../video/04/2.jpg",
-        "../video/04/3.jpg",
-        "../video/04/4.jpg",
+        {
+          img: "../video/04/1.jpg",
+          des: "The First Wharf of Ou River ",
+        },
+        {
+          img: "../video/04/2.jpg",
+          des: "Jin Village Wharf",
+        },
+        {
+          img: "../video/04/3.jpg",
+          des: "Jin Village Drawbridge",
+        },
+        {
+          img: "../video/04/4.jpg",
+          des: "Jin Village Bamboo Garden",
+        },
       ],
     },
     {
-      title: '../video/3_title5.png',
+      title: '../video/title/en/5.png',
       checked: false,
       key: 4,
       progress: "5%",
@@ -100,18 +168,30 @@ export default {
       video: "../video/video6.mp4",
       cdn_video: "https://static.zinete.com/video6.mp4",
       des: [
-        '中国青瓷小镇最引人注目的是嵌在河栏中的两个瓷瓶，线条流畅地相互凝视着，像是徐徐开启了一扇门。 “中国青瓷小镇”六个铁艺大字，已是锈迹斑斑，这并非疏于打理，而是一种聪明的致敬方式，致敬传统，致敬岁月。',
-        '“披云一日，青瓷千年”，青瓷文化园是青瓷小镇的核心。到这里，看着一件件的瓷器，不经意邂逅龙泉青瓷闪烁的千年流光，与她有一场跨越千年的遇见。'
+        'The two porcelain vases embedded in the river column are the most attractive thing in the Chinese celadon town. They are gazing at each other, like opening a door smoothly and slowly.  "Chinese celadon town" the six wrought iron characters are already rusty, this is not negligence, but a special way to pay a tribute to tradition and the years. ',
+        '"Visiting the park one day, you will learn one thousand years story of  celadon", the Celadon Cultural Park is the core of the Celadon Town. Looking at each piece of porcelain here , I inadvertently encountered the old glittering light of Longquan celadon, and had a meeting  with her that spanned a thousand years.'
       ],
       shangxi: [
-        "../video/05/1.jpg",
-        "../video/05/2.jpg",
-        "../video/05/3.jpg",
-        "../video/05/4.jpg",
+        {
+          img: "../video/05/1.jpg",
+          des: "New Look of The Town",
+        },
+        {
+          img: "../video/05/2.jpg",
+          des: "Celadon Town",
+        },
+        {
+          img: "../video/05/3.jpg",
+          des: "Pass Down to Generations",
+        },
+        {
+          img: "../video/05/4.jpg",
+          des: "Impression of Celadon",
+        },
       ],
     },
     {
-      title: '../video/3_title6.png',
+      title: '../video/title/en/6.png',
       checked: false,
       key: 5,
       progress: "5%",
@@ -121,14 +201,26 @@ export default {
       video: "../video/video7.mp4",
       cdn_video: "https://static.zinete.com/video7.mp4",
       des: [
-        '古之言剑，必言龙泉。龙泉宝剑是名闻中外的民间艺术品，已经有2500多年的历史。相传春秋末期，铸剑大师欧冶子奉楚王之命铸剑，遍访江南名山大川寻找铸剑佳地。欧冶子的铸剑技艺在龙泉深深扎根，世代相传。龙泉宝剑以锋刃锐利、寒光逼人、刚柔并济、纹饰巧妙等特点闻名遐迩。',
-        '走进沈广隆剑铺，你将深深的被这家有着120多年历史的剑铺所吸引，沈广隆剑铺延续至今已有六代传人。在这里，你能看到铸剑师在火花四溅中锻造宝剑，也能亲自体验宝剑锻造的每一道工序。'
+        'If you mentioned good sword in old time, it must be from Longquan. Longquan sword is a well-known folk art at home and abroad, with a history of more than 2,500 years. According to legend, in the late Spring and Autumn Period, the master swordsman Ou Yezi was ordered by the King of Chu Country to cast swords then he inspected many good Feng Shui area in the south of the Yangtze River to find a proper place. Ou Yezi`s sword casting skills have been  inherited and passed down from generation to generation . Longquan swords are well-known for their sharp blade, compelling cold light, combination of hardness and softness, and ingenious decoration. ',
+        'You will be very attracted by Shen Guanglong sword shop with the  history more than 120 years. And the shop has passed down for six generations. You will see the swordsmiths forging swords in the splash of sparks, and you can also experience every process of sword forging here.'
       ],
       shangxi: [
-        "../video/06/1.jpg",
-        "../video/06/2.jpg",
-        "../video/06/3.jpg",
-        "../video/06/4.jpg",
+        {
+          img: "../video/06/1.jpg",
+          des: "Shen Guanglong Sword Shop",
+        },
+        {
+          img: "../video/06/2.jpg",
+          des: "Iron Openwork Splash ",
+        },
+        {
+          img: "../video/06/3.jpg",
+          des: "Casting swords over one hundred years",
+        },
+        {
+          img: "../video/06/4.jpg",
+          des: "Xuanwu Sword",
+        },
       ],
     },
   ],

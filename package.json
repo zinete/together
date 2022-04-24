@@ -11,12 +11,13 @@
     "local": "cross-env NUXT_HOST=192.168.0.110 NUXT_PORT=3005 nuxt"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^7.2.0",
+    "caniuse-lite": "^1.0.30001332",
+    "element-ui": "^2.15.1",
     "lib-flexible": "^0.3.2",
     "nuxt": "^2.0.0",
-    "@nuxtjs/i18n": "^7.2.0",
     "postcss-px2rem-exclude": "0.0.6",
-    "vue-video-player": "^5.0.2",
-    "element-ui": "^2.15.1"
+    "vue-video-player": "^5.0.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

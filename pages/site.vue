@@ -37,16 +37,9 @@
             "
             class="flex jend"
           >
-            <img
-              src="../assets/images/location/btn.png"
-              alt=""
-              style="
-                width: 100px;
-                margin-top: 10px;
-                display: block;
-                height: 34px;
-              "
-            />
+            <div class="btn_go">
+              <span>{{ $t("sitetitle") }}</span>
+            </div>
           </div>
         </div>
         <el-collapse-transition>
@@ -67,19 +60,47 @@
               >
                 {{ des }}
               </p>
-              <div class="cover_box">
-                <div
-                  class="cover_box_bg"
-                  v-for="url in items.shangxi"
-                  :key="url.id"
-                >
-                  <!-- <img :src="url" alt="" /> -->
-                  <el-image
-                    class="elimg"
-                    :src="url"
-                    lazy
-                    fits="cover"
-                  ></el-image>
+
+              <div
+                style="
+                  width: 80%;
+                  padding: 20px 0px;
+                  margin: 0px auto;
+                  gap: 12px;
+                  display: grid;
+                  grid-template-columns: 2fr 50%;
+                "
+              >
+                <div v-for="url in items.shangxi" :key="url.id">
+                  <div class="cover_box_bg">
+                    <el-image
+                      class="elimg"
+                      :src="url.img"
+                      lazy
+                      @click.self="showBigImage($event)"
+                      fits="cover"
+                    ></el-image>
+
+                    <big-img
+                      :visible="photoVisible"
+                      :url="bigImgUrl"
+                      @closeClick="
+                        () => {
+                          photoVisible = false;
+                        }
+                      "
+                    ></big-img>
+                  </div>
+                  <span
+                    style="
+                      font-size: 12px;
+                      color: #5e7153;
+                      margin-top: 4px;
+                      display: block;
+                      text-align: center;
+                    "
+                    >{{ url.des }}</span
+                  >
                 </div>
               </div>
             </div>
@@ -88,14 +109,11 @@
         <div class="footer"></div>
       </div>
       <div class="flex row jcenter">
-        <buttom text="打卡留念" @func="showShare" />
+        <buttom :text="$t('sitego')" @func="showShare" />
       </div>
     </div>
     <share-pop @confirm="showShare" title="" :mtTop="'-300px'" :show="share">
-      <img
-        src="https://static.zinete.com/haobao.png"
-        style="width: 100%; font-size: 0"
-      />
+      <img :src="$t('share')" style="width: 100%; font-size: 0" />
     </share-pop>
   </div>
 </template>
@@ -107,20 +125,32 @@ import "video.js/dist/video-js.min.css";
 import { videoPlayer } from "vue-video-player";
 
 import SharePop from "../components/SharePop.vue";
+import BigImg from "../components/BigImg.vue";
 export default {
-  components: { Buttom, videoPlayer, SharePop },
+  components: { Buttom, videoPlayer, SharePop, BigImg },
   data() {
     return {
       text: false,
       playerOptions: [],
       share: false,
       location: 0,
+      photoVisible: false,
+      bigImgUrl: "",
     };
   },
+
   created() {
     this.initVideo();
   },
   methods: {
+    showBigImage(e) {
+      console.log(e.currentTarget.src);
+      //点击图片函数，点击后，把photoVisible设置成true
+      if (e != "") {
+        this.photoVisible = true;
+        this.bigImgUrl = e.currentTarget.src;
+      }
+    },
     onChecked(key) {
       this.$t("city").forEach((item) => {
         if (item.key === key) {
@@ -202,6 +232,21 @@ export default {
   height: 100%;
   padding-bottom: 100px;
 }
+.btn_go {
+  background: #6c8c5d;
+  border: 3px solid #3f4a38;
+  box-sizing: border-box;
+  border-radius: 24px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  padding: 8px 22px;
+  margin: 20px 0px 8px 0px;
+  display: block;
+}
 
 @media only screen and (min-width: 1200px) {
   .home_bg::before {
@@ -239,13 +284,15 @@ export default {
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  margin: 40px auto 0px;
+  /* margin: 80px auto 0px; */
+  padding-bottom: 40px;
 }
+
 .cover_box_bg {
-  width: 38%;
+  position: relative;
+  width: 100%;
   height: 184px;
-  margin: 20px;
-  /* margin-top: 40px; */
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,6 +336,7 @@ export default {
   text-indent: 2em;
   letter-spacing: 0.2em;
   text-align: justify;
+  word-break: break-all;
   margin-top: 28px;
   color: #5e7153;
   line-height: 42px;

@@ -1,8 +1,28 @@
 export default {
   lang: "cn",
+  indeximg: '../images/1_title.png',
+  startimg: "../images/2_title.png",
+  sitego: "打卡留念",
+  sitetitle: "下车游览",
+  starttitle: "开始旅程",
+  indextitle: "即刻出发",
+  share: '../video/title/zh/share_zh.png',
+  startVideo: [
+    {
+      progress: "0%",
+      cover: "../video/cover1.jpg",
+      cdn_cover: "https://static.zinete.com/cover1.jpg",
+      video: "../video/video1.mp4",
+      cdn_video: "https://static.zinete.com/video1.mp4",
+      des: [
+        '有一座城，既有千年文化的沉淀，又有灵秀深邃的美景，她是著名的中国青瓷之都、中国宝剑之邦。这座城就是地处浙江省西南部的龙泉市。',
+        '浮翠的山峦，环抱着温柔的瓯江源头之水，千年的窑火见证着中国造物之美，千锤百炼的锻打记录着了这座城市的历史跫音，在这里所有的相遇都是久别重逢，一起走进龙泉，去遇见刻在骨子里的诗情画意。'
+      ],
+    },
+  ],
   city: [
     {
-      title: '../video/3_title1.png',
+      title: '../video/title/zh/1.png',
       checked: false,
       key: 0,
       progress: "5%",
@@ -17,14 +37,26 @@ export default {
       ],
 
       shangxi: [
-        "../video/01/1.jpg",
-        "../video/01/2.jpg",
-        "../video/01/3.jpg",
-        "../video/01/4.jpg",
+        {
+          img: "../video/01/1.jpg",
+          des: "《龙泉青瓷博物馆》",
+        },
+        {
+          img: "../video/01/2.jpg",
+          des: "《古窑瓷片》",
+        },
+        {
+          img: "../video/01/3.jpg",
+          des: "《古窑瓷片》",
+        },
+        {
+          img: "../video/01/4.jpg",
+          des: "《龙泉青瓷制作工序》",
+        },
       ],
     },
     {
-      title: '../video/3_title2.png',
+      title: '../video/title/zh/2.png',
       checked: false,
       key: 1,
       progress: "5%",
@@ -38,15 +70,28 @@ export default {
         '龙泉青瓷传统烧制技艺是以龙泉一带的瓷土、紫金土、石灰石和石英等为原料，以手工拉坯成型技术、家传配料方法，用窑炉高温（1200℃—1300℃左右）烧制青瓷的一种传统手工技艺。在不同窑火温度下，变幻出粉青、梅子青、灰青、米黄等颜色。',
         '古时一件珍品瓷器出窑，不亚于一场盛大的狂欢。虽然我们无法穿越回古代，看一看那些传世美瓷的形貌，却可以在这里体验现代珍宝的诞生，重拾古窑的记忆。'
       ],
+
       shangxi: [
-        "../video/02/1.jpg",
-        "../video/02/2.jpg",
-        "../video/02/3.jpg",
-        "../video/02/4.jpg",
+        {
+          img: "../video/02/1.jpg",
+          des: "《千年龙窑》",
+        },
+        {
+          img: "../video/02/2.jpg",
+          des: "《开窑》",
+        },
+        {
+          img: "../video/02/3.jpg",
+          des: "《不灭窑火》",
+        },
+        {
+          img: "../video/02/4.jpg",
+          des: "《开窑仪式》",
+        },
       ],
     },
     {
-      title: '../video/3_title3.png',
+      title: '../video/title/zh/3.png',
       checked: false,
       key: 2,
       progress: "5%",
@@ -61,14 +106,26 @@ export default {
         '在古窑间行走，犹如听到古代匠人们神思飞动的声音；一伸手拣一片如翡翠般的瓷片，感受着充满灵气的艺术构思。'
       ],
       shangxi: [
-        "../video/03/1.jpg",
-        "../video/03/2.jpg",
-        "../video/03/3.jpg",
-        "../video/03/4.jpg",
+        {
+          img: "../video/03/1.jpg",
+          des: "《大窑龙泉窑遗址公园》",
+        },
+        {
+          img: "../video/03/2.jpg",
+          des: "《大窑枫洞岩窑址全景》",
+        },
+        {
+          img: "../video/03/3.jpg",
+          des: "《大窑记忆》",
+        },
+        {
+          img: "../video/03/4.jpg",
+          des: "《大窑魅力》",
+        },
       ],
     },
     {
-      title: '../video/3_title4.png',
+      title: '../video/title/zh/4.png',
       checked: false,
       key: 3,
       progress: "5%",
@@ -83,14 +140,26 @@ export default {
         '在这里你可以感受到最质朴的生活气息，江水、古树、木屋、石桥、风车、石径构成了一幅宁静生活的美好画卷。'
       ],
       shangxi: [
-        "../video/04/1.jpg",
-        "../video/04/2.jpg",
-        "../video/04/3.jpg",
-        "../video/04/4.jpg",
+        {
+          img: "../video/04/1.jpg",
+          des: "《瓯江第一码头》",
+        },
+        {
+          img: "../video/04/2.jpg",
+          des: "《金村码头》",
+        },
+        {
+          img: "../video/04/3.jpg",
+          des: "《金村吊桥》",
+        },
+        {
+          img: "../video/04/4.jpg",
+          des: "《金村竹林园》",
+        },
       ],
     },
     {
-      title: '../video/3_title5.png',
+      title: '../video/title/zh/5.png',
       checked: false,
       key: 4,
       progress: "5%",
@@ -100,18 +169,30 @@ export default {
       video: "../video/video6.mp4",
       cdn_video: "https://static.zinete.com/video6.mp4",
       des: [
-        '中国青瓷小镇最引人注目的是嵌在河栏中的两个瓷瓶，线条流畅地相互凝视着，像是徐徐开启了一扇门。 “中国青瓷小镇”六个铁艺大字，已是锈迹斑斑，这并非疏于打理，而是一种聪明的致敬方式，致敬传统，致敬岁月。',
+        '中国青瓷小镇最引人注目的是嵌在河栏中的两个瓷瓶，相互凝视着，像是徐徐开启了一扇门。 “中国青瓷小镇”六个铁艺大字，已是锈迹斑斑，这并非疏于打理，而是一种聪明的致敬方式，致敬传统，致敬岁月。',
         '“披云一日，青瓷千年”，青瓷文化园是青瓷小镇的核心。到这里，看着一件件的瓷器，不经意邂逅龙泉青瓷闪烁的千年流光，与她有一场跨越千年的遇见。'
       ],
       shangxi: [
-        "../video/05/1.jpg",
-        "../video/05/2.jpg",
-        "../video/05/3.jpg",
-        "../video/05/4.jpg",
+        {
+          img: "../video/05/1.jpg",
+          des: "《小镇新貌》",
+        },
+        {
+          img: "../video/05/2.jpg",
+          des: "《青瓷小镇》",
+        },
+        {
+          img: "../video/05/3.jpg",
+          des: "《薪火相传》",
+        },
+        {
+          img: "../video/05/4.jpg",
+          des: "《青瓷印象》",
+        },
       ],
     },
     {
-      title: '../video/3_title6.png',
+      title: '../video/title/zh/6.png',
       checked: false,
       key: 5,
       progress: "5%",
@@ -125,10 +206,22 @@ export default {
         '走进沈广隆剑铺，你将深深的被这家有着120多年历史的剑铺所吸引，沈广隆剑铺延续至今已有六代传人。在这里，你能看到铸剑师在火花四溅中锻造宝剑，也能亲自体验宝剑锻造的每一道工序。'
       ],
       shangxi: [
-        "../video/06/1.jpg",
-        "../video/06/2.jpg",
-        "../video/06/3.jpg",
-        "../video/06/4.jpg",
+        {
+          img: "../video/06/1.jpg",
+          des: "《沈广隆剑铺》",
+        },
+        {
+          img: "../video/06/2.jpg",
+          des: "《铁花飞溅》",
+        },
+        {
+          img: "../video/06/3.jpg",
+          des: "《百年铸剑》",
+        },
+        {
+          img: "../video/06/4.jpg",
+          des: "《玄武剑》",
+        },
       ],
     },
   ],

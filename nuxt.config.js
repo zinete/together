@@ -18,6 +18,13 @@ export default {
         content: process.env.npm_package_description,
       },
     ],
+    script: [
+      // {
+      //   src: "https://res.wx.qq.com/open/js/jweixin-1.2.0.js",
+      //   defer: true,
+      // }
+
+    ],
     // link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.jpg" }],
   },
   /*

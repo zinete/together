@@ -2,11 +2,7 @@
   <div class="home_bg">
     <div class="home_bg_color">
       <div class="relative">
-        <img
-          src="../assets/images/start/2_title.png"
-          class="home_bg_title"
-          alt="一剑钟情"
-        />
+        <img :src="$t('startimg')" class="home_bg_title" alt="一剑钟情" />
         <div class="flex col icenter absolute zindex10 home_bg_xiangyue">
           <img src="../assets/images/start/2_ooo.png" alt="" class="top_icon" />
           <div class="start_info">
@@ -19,15 +15,12 @@
               ></video-player>
             </div>
             <div class="text_box">
-              <p>
-                有一座城，既有千年文化的沉淀，又有灵秀深邃的美景，她是著名的中国青瓷之都、中国宝剑之邦。这座城就是地处浙江省西南部的龙泉市。
-              </p>
-              <p>
-                浮翠的山峦，环抱着温柔的瓯江源头之水，千年的窑火见证着中国造物之美，千锤百炼的锻打记录着了这座城市的历史跫音，在这里所有的相遇都是久别重逢，一起走进龙泉，去遇见刻在骨子里的诗情画意。
+              <p v-for="text in $t('startVideo')[0].des" :key="text.id">
+                {{ text }}
               </p>
             </div>
           </div>
-          <buttom @func="start" text="开启旅程" class="btn_view" />
+          <buttom @func="start" :text="$t('starttitle')" class="btn_view" />
         </div>
       </div>
 
@@ -47,20 +40,26 @@ export default {
   data() {
     return {
       playerOptions: [],
-      city: [
-        {
-          progress: "0%",
-          cover: "../video/cover1.jpg",
-          cdn_cover: "https://static.zinete.com/cover1.jpg",
-          video: "../video/video1.mp4",
-          cdn_video: "https://static.zinete.com/video1.mp4",
-        },
-      ],
     };
   },
   created() {
     this.initVideo();
   },
+  mounted() {
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+    // We listen to the resize event
+    window.addEventListener("resize", () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      console.log(vh);
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    });
+  },
+
   methods: {
     start() {
       //  跳转 site 页面
@@ -78,7 +77,7 @@ export default {
       }
     },
     initVideo() {
-      for (let i of this.city) {
+      for (let i of this.$t("startVideo")) {
         let config = {
           playbackRates: [1.0, 2.0, 3.0], //播放速度
           autoplay: false, //如果true,浏览器准备好时开始回放。
@@ -112,10 +111,11 @@ export default {
 <style lang="css" scoped>
 .home_bg {
   width: 100%;
-  height: 1400px;
-  background: url("../assets/images/home/1_bg1.png");
-  background-size: contain;
-  position: relative;
+  height: 200vh;
+  /* height: calc(var(--vh, 1vh) * 100); */
+  background: url("../assets/images/home/1_bg1.png") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -130,8 +130,6 @@ export default {
 .home_bg_color {
   width: 100%;
   height: 100%;
-  background: #3a4934;
-  background-attachment: fixed;
   background-size: cover;
 }
 .home_bg_title {
@@ -209,5 +207,6 @@ export default {
   text-align: justify;
   line-height: 42px;
   font-size: 28px;
+  word-break: break-all;
 }
 </style>
