@@ -45,20 +45,6 @@ export default {
   created() {
     this.initVideo();
   },
-  mounted() {
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-
-    // We listen to the resize event
-    window.addEventListener("resize", () => {
-      // We execute the same script as before
-      let vh = window.innerHeight * 0.01;
-      console.log(vh);
-      document.documentElement.style.setProperty("--vh", `${vh}px`);
-    });
-  },
 
   methods: {
     start() {
@@ -109,14 +95,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.home_bg {
+/* .home_bg {
   width: 100%;
   height: 200vh;
-  /* height: calc(var(--vh, 1vh) * 100); */
   background: url("../assets/images/home/1_bg1.png") no-repeat;
   background-size: cover;
   background-attachment: fixed;
-}
+} */
 
 @media only screen and (min-width: 1200px) {
   .home_bg {
@@ -130,6 +115,7 @@ export default {
 .home_bg_color {
   width: 100%;
   height: 100%;
+  /* background: #3a4934; */
   background-size: cover;
 }
 .home_bg_title {

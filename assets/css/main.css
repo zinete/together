@@ -46,11 +46,17 @@ page-enter-active,
 
 
 
+body {
+  background: url("../../assets/images/home/1_bg1.png") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 @media only screen and (min-width: 1200px) {
 
 
   body {
+    background: url("") no-repeat;
     width: 750px;
     margin: 0 auto;
     height: 100%;

@@ -13,7 +13,7 @@ export default {
       cover: "../video/cover1.jpg",
       cdn_cover: "https://static.zinete.com/cover1.jpg",
       video: "../video/video1.mp4",
-      cdn_video: "https://static.zinete.com/video1.mp4",
+      cdn_video: "https://static.zinete.com/start_video_en.mp4",
       des: [
         'There is a city has both the precipitation of thousands years  culture and the profound beauty. She is Longquan, who is  the capital of Chinese celadon and the home of swords , which is located in the southwest of Zhejiang Province in China. ',
         'The emerald mountains, surrounded by the gentle water at the source of the Ou River, the thousand-year-old kiln fire witnesses of the beauty of Chinese creations, and the sounds of forging records the history of the city.                                                                                     All encounters here are reunions after a long separation. Walking into Longquan, to meet the poetic and picturesque deeply.'
