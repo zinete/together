@@ -1,6 +1,18 @@
 <template>
   <div v-show="visible" @click="closeClick" class="showPhoto">
-    <img class="img" :src="url" alt="图片加载失败" />
+    <div>
+      <img class="img" :src="url" alt="图片加载失败" />
+      <p
+        style="
+          font-size: 14px;
+          color: #fff;
+          text-align: center;
+          margin-top: 20px;
+        "
+      >
+        {{ des }}
+      </p>
+    </div>
   </div>
 </template>
 
@@ -8,6 +20,10 @@
 export default {
   props: {
     url: {
+      type: String,
+      default: "",
+    },
+    des: {
       type: String,
       default: "",
     },

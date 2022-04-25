@@ -83,6 +83,7 @@
                     ></el-image>
 
                     <big-img
+                      :des="url.des"
                       :visible="photoVisible"
                       :url="bigImgUrl"
                       @closeClick="
@@ -219,6 +220,7 @@ export default {
   z-index: -1;
   top: 0;
   right: 0;
+  height: 100vh;
   bottom: 0;
   height: calc(var(--vh, 1vh) * 100);
   left: 0;
@@ -228,6 +230,7 @@ export default {
 
 .home_bg {
   display: block;
+
   left: 0;
   top: 0;
   z-index: 10;
