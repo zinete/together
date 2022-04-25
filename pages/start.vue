@@ -1,28 +1,26 @@
 <template>
   <div class="home_bg">
     <div class="home_bg_color">
-      <div class="relative">
-        <img :src="$t('startimg')" class="home_bg_title" alt="一剑钟情" />
-        <div class="flex col icenter absolute zindex10 home_bg_xiangyue">
-          <img src="../assets/images/start/2_ooo.png" alt="" class="top_icon" />
-          <div class="start_info">
-            <div class="video_box">
-              <video-player
-                @play="onPlayerPlay($event, 0)"
-                class="video-player vjs-custom-skin vjs-big-play-centered"
-                ref="videoPlayer"
-                :options="playerOptions[0]"
-              ></video-player>
-            </div>
-            <div class="text_box">
-              <p v-for="text in $t('startVideo')[0].des" :key="text.id">
-                {{ text }}
-              </p>
-            </div>
+      <img :src="$t('startimg')" class="home_bg_title" alt="一剑钟情" />
+      <div class="flex col icenter zindex10 home_bg_xiangyue relative">
+        <img src="../assets/images/start/2_ooo.png" alt="" class="top_icon" />
+        <div class="start_info">
+          <div class="video_box">
+            <video-player
+              @play="onPlayerPlay($event, 0)"
+              class="video-player vjs-custom-skin vjs-big-play-centered"
+              ref="videoPlayer"
+              :options="playerOptions[0]"
+            ></video-player>
           </div>
-          <buttom @func="start" :text="$t('starttitle')" class="btn_view" />
+          <div class="text_box">
+            <p v-for="text in $t('startVideo')[0].des" :key="text.id">
+              {{ text }}
+            </p>
+          </div>
         </div>
       </div>
+      <buttom @func="start" :text="$t('starttitle')" class="btn_view" />
 
       <img src="../assets/images/home/1_yun1.png" alt="" class="yun1" />
       <img src="../assets/images/home/1_yun2.png" alt="" class="yun2" />
@@ -95,27 +93,25 @@ export default {
 </script>
 
 <style lang="css" scoped>
-/* .home_bg {
+.home_bg {
   width: 100%;
-  height: 200vh;
   background: url("../assets/images/home/1_bg1.png") no-repeat;
   background-size: cover;
   background-attachment: fixed;
-} */
+}
 
 @media only screen and (min-width: 1200px) {
   .home_bg {
     width: 100%;
-    height: 1400px;
     background: url("../assets/images/home/1_bg1.png");
-    background-size: contain;
-    position: relative;
+    background-size: cover;
   }
 }
 .home_bg_color {
   width: 100%;
   height: 100%;
-  /* background: #3a4934; */
+  position: relative;
+  padding-bottom: 10px;
   background-size: cover;
 }
 .home_bg_title {
@@ -143,10 +139,10 @@ export default {
 }
 
 .home_bg_xiangyue {
-  top: 250px;
+  /* top: 250px; */
   left: 30px;
   right: 0px;
-  /* width: 100%; */
+  width: 96%;
   padding-bottom: 100px;
   background-size: 100% 100% !important;
   background-repeat: no-repeat !important;
@@ -162,8 +158,7 @@ export default {
   font-size: 28px;
 }
 .btn_view {
-  position: absolute;
-  bottom: -120px;
+  margin: 20px auto;
 }
 
 .top_icon {

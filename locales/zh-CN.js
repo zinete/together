@@ -3,6 +3,8 @@ export default {
   indeximg: '../images/1_title.png',
   startimg: "../images/2_title.png",
   sitego: "打卡留念",
+  power: "相约一场“奇遇”之旅",
+  des: "一剑钟情，从瓷开始",
   sitetitle: "下车游览",
   starttitle: "开始旅程",
   indextitle: "即刻出发",

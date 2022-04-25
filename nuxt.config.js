@@ -8,7 +8,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: "一剑钟情，从瓷开始",
+
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" },

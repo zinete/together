@@ -2,10 +2,12 @@
   <div class="home_bg">
     <div class="home_bg_color">
       <div class="relative">
-        <img :src="$t('startimg')" class="home_bg_title" alt="一剑钟情" />
+        <img :src="$t('indeximg')" class="home_bg_title" alt="一剑钟情" />
         <div class="flex col icenter absolute zindex10 home_bg_xiangyue">
           <div class="home_bg_xiangyue_box flex row icenter">
-            <span>相约一场“奇遇”之旅</span>
+            <span style="padding: 2px 0px; display: block">{{
+              $t("power")
+            }}</span>
           </div>
           <img
             src="https://static.zinete.com/jipiao.png"
@@ -29,7 +31,11 @@
 import Buttom from "../components/Buttom.vue";
 export default {
   components: { Buttom },
-
+  head(app) {
+    return {
+      title: app.$t("des"),
+    };
+  },
   methods: {
     start() {
       // 跳转到 start 页面
@@ -44,18 +50,17 @@ export default {
 </script>
 
 <style lang="css" scoped>
-/* .home_bg {
+.home_bg {
   width: 100%;
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100vh;
   background: url("../assets/images/home/1_bg1.png");
   background-size: contain;
-  position: relative;
-} */
+}
 
 @media only screen and (min-width: 1200px) {
   .home_bg {
     width: 100%;
-    height: 1400px;
+    height: 1600px;
     background: url("../assets/images/home/1_bg1.png");
     background-size: contain;
     position: relative;
