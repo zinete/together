@@ -78,12 +78,12 @@
                       class="elimg"
                       :src="url.img"
                       lazy
-                      @click.self="showBigImage($event)"
+                      @click.self="showBigImage($event, url)"
                       fits="cover"
                     ></el-image>
 
                     <big-img
-                      :des="url.des"
+                      :des="imgdes"
                       :visible="photoVisible"
                       :url="bigImgUrl"
                       @closeClick="
@@ -138,6 +138,7 @@ export default {
       location: 0,
       photoVisible: false,
       bigImgUrl: "",
+      imgdes: "",
     };
   },
 
@@ -150,11 +151,12 @@ export default {
     this.initVideo();
   },
   methods: {
-    showBigImage(e) {
+    showBigImage(e, url) {
       console.log(e.currentTarget.src);
       //点击图片函数，点击后，把photoVisible设置成true
       if (e != "") {
         this.photoVisible = true;
+        this.imgdes = url.des.trim();
         this.bigImgUrl = e.currentTarget.src;
       }
     },
