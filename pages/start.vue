@@ -22,8 +22,13 @@
       </div>
       <buttom @func="start" :text="$t('starttitle')" class="btn_view" />
 
-      <img src="../assets/images/home/1_yun1.png" alt="" class="yun1" />
-      <img src="../assets/images/home/1_yun2.png" alt="" class="yun2" />
+      <!-- <img src="../assets/images/home/1_yun1.png" alt="" class="yun1" />
+      <img
+        src="../assets/images/home/1_yun2.png"
+        alt=""
+        class="yun2"
+        :style="`top: ${$t('yunsize')}`"
+      /> -->
     </div>
   </div>
 </template>
@@ -35,6 +40,11 @@ import "video.js/dist/video-js.min.css";
 import { videoPlayer } from "vue-video-player";
 export default {
   components: { Buttom, videoPlayer },
+  head(app) {
+    return {
+      title: app.$t("des"),
+    };
+  },
   data() {
     return {
       playerOptions: [],
@@ -127,7 +137,6 @@ export default {
 
 .yun2 {
   position: absolute;
-  top: 140px;
   width: 160px;
   right: 0;
 }
@@ -143,6 +152,7 @@ export default {
   left: 30px;
   right: 0px;
   width: 96%;
+  margin-top: 20px;
   padding-bottom: 100px;
   background-size: 100% 100% !important;
   background-repeat: no-repeat !important;

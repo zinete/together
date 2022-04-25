@@ -6,7 +6,7 @@
           <el-image
             :src="items.title"
             lazy
-            style="width: 80%; margin: 60px auto 5px"
+            style="width: 92%; margin: 60px auto 4px"
             fits="cover"
           ></el-image>
           <div class="bg_lu">
@@ -74,6 +74,7 @@
                 <div v-for="url in items.shangxi" :key="url.id">
                   <div class="cover_box_bg">
                     <el-image
+                      style="cursor: pointer"
                       class="elimg"
                       :src="url.img"
                       lazy
@@ -139,6 +140,11 @@ export default {
     };
   },
 
+  head(app) {
+    return {
+      title: app.$t("des"),
+    };
+  },
   created() {
     this.initVideo();
   },

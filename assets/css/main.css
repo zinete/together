@@ -60,7 +60,7 @@ body {
 
 
   body {
-    background: url("") no-repeat;
+    background: transparent;
     width: 750px;
     margin: 0 auto;
     height: 100%;

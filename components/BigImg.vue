@@ -43,5 +43,6 @@ export default {
   margin: auto 0;
   max-width: 100%;
   text-align: center;
+  cursor: pointer;
 }
 </style>

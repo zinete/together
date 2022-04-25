@@ -20,8 +20,8 @@
           </div>
         </div>
       </div>
-      <img src="../assets/images/home/1_yun1.png" alt="" class="yun1" />
-      <img src="../assets/images/home/1_yun2.png" alt="" class="yun2" />
+      <!-- <img src="../assets/images/home/1_yun1.png" alt="" class="yun1" />
+      <img src="../assets/images/home/1_yun2.png" alt="" class="yun2" /> -->
       <img src="../assets/images/home/1_yun3.png" alt="" class="yun3" />
     </div>
   </div>
@@ -93,6 +93,7 @@ export default {
 }
 
 .yun3 {
+  bottom: 40%;
   width: 188px;
   position: absolute;
   z-index: 999;
@@ -107,7 +108,6 @@ export default {
   left: 0px;
   right: 0px;
   width: 100%;
-  height: 100%;
   background-size: 92% 100% !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
