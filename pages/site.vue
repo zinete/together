@@ -337,7 +337,6 @@ export default {
   /* width: 100%; */
 }
 .text_main p {
-  /* height: 1000px; */
   width: 80%;
   margin: 0 auto;
   font-size: 28px;
