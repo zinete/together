@@ -8,7 +8,7 @@ export default {
   sitego: "Must go places",
   des: "Loving with the sword at the first glimpse,  starting a relationship from knowing the celadon",
   power: "Set up an adventure trip together ",
-  sitetitle: "Go",
+  sitetitle: "Start the journey",
   indextitle: "Beginning now",
   starttitle: "Start the journey",
   startVideo: [
