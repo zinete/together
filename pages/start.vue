@@ -201,6 +201,5 @@ export default {
   text-align: justify;
   line-height: 42px;
   font-size: 28px;
-  word-break: break-all;
 }
 </style>

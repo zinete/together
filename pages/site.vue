@@ -343,7 +343,6 @@ export default {
   font-size: 28px;
   text-indent: 2em;
   text-align: justify;
-  word-break: break-all;
   margin-top: 28px;
   color: #5e7153;
   line-height: 42px;
