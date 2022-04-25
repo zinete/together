@@ -1,6 +1,7 @@
 export default {
   lang: "cn",
   yunsize: "88px",
+  spacing: "0.2em",
   indeximg: '../images/1_title.png',
   startimg: "../images/2_title.png",
   sitego: "打卡留念",

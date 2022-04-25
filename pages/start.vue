@@ -14,7 +14,11 @@
             ></video-player>
           </div>
           <div class="text_box">
-            <p v-for="text in $t('startVideo')[0].des" :key="text.id">
+            <p
+              :style="`letter-spacing: ${$t('spacing')}`"
+              v-for="text in $t('startVideo')[0].des"
+              :key="text.id"
+            >
               {{ text }}
             </p>
           </div>
@@ -192,7 +196,6 @@ export default {
 .text_box p {
   font-weight: 400;
   text-indent: 2em;
-  letter-spacing: 0.2em;
   margin-top: 10px;
   color: #5e7153;
   text-align: justify;

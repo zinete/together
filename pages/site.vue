@@ -54,7 +54,7 @@
             </div>
             <div class="text_main">
               <p
-                style="width: 80%; margin: 0 auto"
+                :style="`letter-spacing: ${$t('spacing')}`"
                 v-for="des in items.des"
                 :key="des.id"
               >
@@ -338,9 +338,10 @@ export default {
 }
 .text_main p {
   /* height: 1000px; */
+  width: 80%;
+  margin: 0 auto;
   font-size: 28px;
   text-indent: 2em;
-  letter-spacing: 0.2em;
   text-align: justify;
   word-break: break-all;
   margin-top: 28px;

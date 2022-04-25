@@ -1,6 +1,7 @@
 export default {
   lang: "en",
   yunsize: "100px",
+  spacing: "0em",
   share: '../video/title/en/share_en.png',
   indeximg: '../images/1_title_en.png',
   startimg: "../images/2_title_en.png",
